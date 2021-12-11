@@ -23,75 +23,6 @@
 </head>
 
 <body id="page-top">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js" ></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-<script>
-
-    const raph = (funci,inicial,erro) =>{
-           
-            let  boton, grafi, parrafo, texto, contador,derivada, evaluadaDeriva, evaluadaFun, resultado, total, result, anterior;    
-            contador=0;       
-    
-            function miFuncion(anterior, inicial, erro) {
-                let primert,segundot, tercert, cuartot;
-                primert= inicial;
-                if(inicial===1){
-                    return true;
-                }
-                segundot= primert-(anterior);
-                tercert=segundot/(primert);    
-                cuartot= Math.abs(tercert*100);        
-                if (cuartot >= erro) {
-                    return true
-                }else{
-                    return false
-                }
-                //function agregar(index) {
-                  //  let fun = document.getElementById("idFun").value;
-                    //let ini = document.getElementById("idX").value;
-                    //let error = document.getElementById("idError").value;
-    
-                //}
-    }
-    
-            do {
-                contador++;
-                //alert("entro al while");
-                derivada=math.derivative(funci,'x');
-                //alert(derivada);
-                evaluadaFun=math.evaluate(funci,{x: inicial});  
-                //alert(evaluadaFun);              
-                evaluadaDeriva=derivada.evaluate({x: inicial});
-                //alert(evaluadaDeriva);
-                resultado= inicial - (evaluadaFun/evaluadaDeriva);
-                //alert(evaluadaFun/evaluadaDeriva);
-               // alert("la iteracion " + (contador) + " es = " + resultado);
-                anterior=inicial;
-                inicial=resultado;    
-                parrafo= document.createElement('p');
-                texto= document.createTextNode("La iteracion " + contador + " da " +resultado);
-                parrafo.appendChild(texto);
-                document.getElementById("divisito").appendChild(parrafo);   
-                
-
-    
-    
-                
-            } while (miFuncion(anterior,inicial,erro));
-    
-            alert ("iteracciones: "+contador);
-            alert("X vale= "+ resultado);
-            parrafo= document.createElement('h4');
-                texto= document.createTextNode("El resultado de X es  " +resultado);
-                parrafo.appendChild(texto);
-                document.getElementById("divisito").appendChild(parrafo);     
-                
-    
-    
-    
-    
-    }
-    </script>
 
 
    
@@ -262,8 +193,9 @@
                             </form>
                             <hr>
                             <div id="divisito"></div>
-                            <canvas id="chart" width="2000" height="600"></canvas>
-                    
+                            <div id="grafiquito">
+                                <canvas id="chart" width="2000" height="600"></canvas>
+                            </div>
                         </div>    
                     </div>
 
@@ -304,6 +236,108 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<script>
+
+    const raph = (funci,inicial,erro) =>{
+           
+            let  boton, grafi, parrafo, texto, contador,derivada, evaluadaDeriva, evaluadaFun, resultado, total, result, anterior;    
+            contador=0;       
+    
+            function miFuncion(anterior, inicial, erro) {
+                let primert,segundot, tercert, cuartot;
+                primert= inicial;
+                if(inicial===1){
+                    return true;
+                }
+                segundot= primert-(anterior);
+                tercert=segundot/(primert);    
+                cuartot= Math.abs(tercert*100);        
+                if (cuartot >= erro) {
+                    return true
+                }else{
+                    return false
+                }
+                //function agregar(index) {
+                  //  let fun = document.getElementById("idFun").value;
+                    //let ini = document.getElementById("idX").value;
+                    //let error = document.getElementById("idError").value;
+    
+                //}
+    }
+    
+            do {
+                contador++;
+                //alert("entro al while");
+                derivada=math.derivative(funci,'x');
+                //alert(derivada);
+                evaluadaFun=math.evaluate(funci,{x: inicial});  
+                //alert(evaluadaFun);              
+                evaluadaDeriva=derivada.evaluate({x: inicial});
+                //alert(evaluadaDeriva);
+                resultado= inicial - (evaluadaFun/evaluadaDeriva);
+                //alert(evaluadaFun/evaluadaDeriva);
+               // alert("la iteracion " + (contador) + " es = " + resultado);
+                anterior=inicial;
+                inicial=resultado;    
+                parrafo= document.createElement('p');
+                texto= document.createTextNode("La iteracion " + contador + " da " +resultado);
+                parrafo.appendChild(texto);
+                document.getElementById("divisito").appendChild(parrafo);   
+           
+                
+            } while (miFuncion(anterior,inicial,erro));
+    
+            alert ("iteracciones: "+contador);
+            alert("X vale= "+ resultado);
+            parrafo= document.createElement('h4');
+                texto= document.createTextNode("El resultado de X es  " +resultado);
+                parrafo.appendChild(texto);
+                document.getElementById("divisito").appendChild(parrafo);     
+                
+                renderCharts()
+    
+    
+    
+    }
+
+
+    let x1=1;
+    let x2=2;
+    let x3=-1;
+    let y1=-1;
+    let y2=5;
+    let y3=-3;
+    let func = document.getElementById("idFun").value;
+    //alert ("la funcion es"+ func);
+    
+
+
+    function totalCasesChart(ctx) {
+      const chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: [y1,y2,y3],
+          datasets: [{
+            label: func,
+            data: [x1,x2,x3],
+            backgroundColor: 'rgba(255, 0, 0, 0)'
+          }]
+        }
+      }
+            )
+    }
+  
+    function renderCharts() {
+      $("#grafiquito").show();
+  
+      const ctx = document.querySelector('#chart').getContext('2d')
+      totalCasesChart(ctx)   
+    }
+  
+
+    </script>
 
 
     <script> 
@@ -330,37 +364,7 @@
         
       </script> 
 
-<script type="module">
-  let x1=1;
-  let x2=2;
-  let x3=-1;
-  let y1=-1;
-  let y2=5;
-  let y3=-3;
-  let func = document.getElementById("idFun").value;
-  //alert ("la funcion es"+ func);
-  
 
-  function totalCasesChart(ctx) {
-          const chart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: [y1,y2,y3],
-        datasets: [{
-          label: func,
-          data: [x1,x2,x3],
-          backgroundColor: 'rgba(255, 0, 0, 0)'
-        }]
-      }
-    }
-          )
-  }
-  function renderCharts() {
-    const ctx = document.querySelector('#chart').getContext('2d')
-  totalCasesChart(ctx)   
-  }
-  renderCharts()
-</script>
 
 </body>
 
