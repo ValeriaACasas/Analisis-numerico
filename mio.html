@@ -35,7 +35,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Analsis Numerico</div>
+                <div class="sidebar-brand-text mx-3">Análisis Numérico</div>
             </a>
 
             <!-- Divider -->
@@ -53,14 +53,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>New-Raphson</span>
+                    <span>Newton-Raphson</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
                         <a class="collapse-item" href="teoria.html">Teoria</a>
                         <a class="collapse-item" href="mio.html">Metodo</a>
-                        <a class="collapse-item" href="grafica.html">Grafica</a>
                     </div>
                 </div>
             </li>
@@ -89,7 +88,7 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <h1>New-Raphson</h1>
+                    <h1>Newton-Raphson</h1>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -144,7 +143,7 @@
                     <div>
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Metodo New-Raphson</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Método Newton-Raphson</h1>
                             </div>
                             <form class="user">
                                 <div class="form-inline">
@@ -290,17 +289,20 @@
             let desde = raiz - 2;
             const labels = [];
             const data = [];
+            let punto = {};
 
             for (let i = 0; i < 5; i += 0.1) {
                 const x = math.round(desde + i, 4);
                 const y = math.round(mFunc.evaluate({ x: x }), 4);
                 console.debug(x, y)
-                labels.push(x);
-                data.push(y);
+               // labels.push(x);
+               // data.push(y);
+               punto = {x, y};
+               data.push(punto);
             }
 
             const chart = new Chart(ctx, {
-                type: 'line',
+                type: 'scatter',
                 data: {
                     labels: labels,
                     datasets: [{
@@ -308,14 +310,25 @@
                         data: data,
                         borderColor: 'rgba(255, 0, 0, 1)',
                         fill: false,
+                        type: 'line'
                     }]
                 },
                 options: {
                     scales: {
-                       
+                        xAxes: [{
+                            gridLines: {
+                                zeroLineWidth: 2,
+                                zeroLineColor: "#2C292E",
+                            },
+                        }],
+                        yAxes: [{
+                            gridLines: {
+                                zeroLineWidth: 2,
+                                zeroLineColor: "#2C292E",
+                            },
+                        }]
                     }
                 }
-
             });
         }
 
