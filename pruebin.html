@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js" ></script>
+<script>
+
+const raph = (funci,inicial,erro) =>{
+       
+        let  parrafo, texto, contador,derivada, evaluadaDeriva, evaluadaFun, resultado, total, result, anterior;    
+        contador=0;       
+
+        function miFuncion(anterior, inicial, erro) {
+            let primert,segundot, tercert, cuartot;
+            primert= inicial;
+            if(inicial===1){
+                return true;
+            }
+            segundot= primert-(anterior);
+            tercert=segundot/(primert);    
+            cuartot= Math.abs(tercert*100);        
+            if (cuartot >= erro) {
+                return true
+            }else{
+                return false
+            }
+            function agregar(index) {
+                let fun = document.getElementById("idFun").value;
+                let ini = document.getElementById("idX").value;
+                let error = document.getElementById("idError").value;
+
+            }
+}
+
+        do {
+            contador++;
+            //alert("entro al while");
+            derivada=math.derivative(funci,'x');
+            //alert(derivada);
+            evaluadaFun=math.evaluate(funci,{x: inicial});  
+            //alert(evaluadaFun);              
+            evaluadaDeriva=derivada.evaluate({x: inicial});
+            //alert(evaluadaDeriva);
+            resultado= inicial - (evaluadaFun/evaluadaDeriva);
+            //alert(evaluadaFun/evaluadaDeriva);
+            alert("la iteracion " + (contador) + " es = " + resultado);
+            anterior=inicial;
+            inicial=resultado;    
+            parrafo= document.createElement('p');
+            texto= document.createTextNode("La iteracion " + contador + " da " +resultado);
+            parrafo.appendChild(texto);
+            document.getElementById("divisito").appendChild(parrafo);        
+
+
+            
+        } while (miFuncion(anterior,inicial,erro));
+
+        alert ("iteracciones: "+contador);
+        alert("X vale= "+ resultado);
+        parrafo= document.createElement('p');
+            texto= document.createTextNode("El resultado de X es  " +resultado);
+            parrafo.appendChild(texto);
+            document.getElementById("divisito").appendChild(parrafo);        
+
+
+
+
+}</script>
+    <div >
+                    
+        <div class="p-5">
+            <div class="text-center">
+                <h1 class="h4 text-gray-900 mb-4">Metodo New-Raphson</h1>
+            </div>
+            <form class="user">
+                <div class="form-group">
+                    <label for="idFun" >F(x):</label>
+                    <input type="text" class="form-control form-control-user"
+                        id="idFun" aria-describedby="emailHelp"
+                        placeholder="Función"> 
+                        <div float-left > <button type="button"  onclick="setSombrerito()">^</button></div>
+                </div>
+                <div class="form-group">
+                    <label for="idX" >X<sub>0</sub> :</label>
+                    <input type="text" class="form-control form-control-user"
+                        id="idX" aria-describedby="emailHelp"
+                        placeholder="valor inicial de x">
+                </div>
+                <div class="form-group">
+                    <label for="idError" >Error:</label>
+                    <input type="text" class="form-control form-control-user"
+                        id="idError" aria-describedby="emailHelp" placeholder="Tolerancia deseada">
+                </div>
+                <button type="button" class="btn btn-primary btn-user btn-block " onclick= "raph(document.getElementById('idFun').value, parseFloat(document.getElementById('idX').value), parseFloat(document.getElementById('idError').value))"> 
+                    Calcular 
+                </button> 
+                
+                                    
+            </form>
+<div id="divisito"></div>
+
+            <hr>
+    <div>
+        <script> 
+
+const setSombrerito = () =>{
+  let inputValue = document.getElementById("idFun").value; 
+  document.getElementById("idFun").value = inputValue + "^"; 
+  document.getElementById("idFun").focus();
+}
+
+const ouy = () =>{
+    let fun = document.getElementById("idFun").value;
+    let ini = document.getElementById("idX").value;
+    let error = document.getElementById("idError").value;
+
+    document.getElementById("uno").innerHTML = "La funcion es:"; 
+    document.getElementById("dos").innerHTML = fun; 
+    document.getElementById("tres").innerHTML = "El valor inicial es:"; 
+    document.getElementById("cuatro").innerHTML = ini; 
+    document.getElementById("cinco").innerHTML = "con un error de:"; 
+    document.getElementById("seis").innerHTML = error; 
+
+  
+}
+
+</script> 
+
+</body>
+</html>
