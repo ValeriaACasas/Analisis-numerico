@@ -279,40 +279,45 @@
         parrafo.appendChild(texto);
         document.getElementById("divisito").appendChild(parrafo);
 
-        renderCharts();
+        renderCharts(math.parse(funci), math.round(resultado, 1));
     }
 
-
-    let x1 = 1;
-    let x2 = 2;
-    let x3 = -1;
-    let y1 = -1;
-    let y2 = 5;
-    let y3 = -3;
     let func = document.getElementById("idFun").value;
 
     //console.debug ("la funcion es"+ func);
 
 
-    function totalCasesChart(ctx) {
+    function totalCasesChart(ctx, mFunc, raiz) {
+        let desde = raiz -2;
+        const labels = [];
+        const data = [];
+
+        for (let i = 0; i < (desde + 5); i++) {
+            const x = desde + i;
+            const y = mFunc.evaluate({x: x});
+            console.debug(x, y)
+            labels.push(x);
+            data.push(y);
+        }
+
         const chart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: [y1, y2, y3],
+                labels: labels,
                 datasets: [{
-                    label: func,
-                    data: [x1, x2, x3],
-                    backgroundColor: 'rgba(255, 0, 0, 0)'
+                    label: mFunc.toString(),
+                    data: data,
+                    backgroundColor: 'rgba(255, 0, 0, 1)'
                 }]
             }
         });
     }
 
-    function renderCharts() {
+    function renderCharts(mFunc, raiz) {
         $("#grafiquito").show();
 
         const ctx = document.querySelector('#chart').getContext('2d')
-        totalCasesChart(ctx)
+        totalCasesChart(ctx, mFunc, raiz)
     }
 
 
