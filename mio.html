@@ -14,8 +14,8 @@
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -23,322 +23,320 @@
 </head>
 
 <body id="page-top">
- 
-    <!-- Page Wrapper -->
-    <div id="wrapper">
 
-        <!-- Sidebar /Barra lateral-->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<!-- Page Wrapper -->
+<div id="wrapper">
 
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">Analsis Numerico</div>
+    <!-- Sidebar /Barra lateral-->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <div class="sidebar-brand-icon rotate-n-15">
+                <i class="fas fa-laugh-wink"></i>
+            </div>
+            <div class="sidebar-brand-text mx-3">Analsis Numerico</div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Interface
+        </div>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+               aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>New-Raphson</span>
             </a>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">       
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Interface
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>New-Raphson</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="teoria.html">Teoria</a>
-                        <a class="collapse-item" href="mio.html">Metodo</a>
-                        <a class="collapse-item" href="grafica.html">Grafica</a>
-                    </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Custom Components:</h6>
+                    <a class="collapse-item" href="teoria.html">Teoria</a>
+                    <a class="collapse-item" href="mio.html">Metodo</a>
+                    <a class="collapse-item" href="grafica.html">Grafica</a>
                 </div>
-            </li>   
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-        </ul>
-        <!-- End of Sidebar -->
+        </li>
 
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+    </ul>
+    <!-- End of Sidebar -->
 
-            <!-- Main Content -->
-            <div id="content">
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
 
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <!-- Main Content -->
+        <div id="content">
 
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-                    <!-- Topbar Search -->
-                    <h1>New-Raphson</h1>
+                <!-- Sidebar Toggle (Topbar) -->
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
 
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                <!-- Topbar Search -->
+                <h1>New-Raphson</h1>
 
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
+                <!-- Topbar Navbar -->
+                <ul class="navbar-nav ml-auto">
+
+                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                    <li class="nav-item dropdown no-arrow d-sm-none">
+                        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <!-- Dropdown - Messages -->
+                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                             aria-labelledby="searchDropdown">
+                            <form class="form-inline mr-auto w-100 navbar-search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control bg-light border-0 small"
+                                           placeholder="Search for..." aria-label="Search"
+                                           aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" type="button">
+                                            <i class="fas fa-search fa-sm"></i>
+                                        </button>
                                     </div>
-                                </form>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Alerts -->                    
-                        <!-- Nav Item - Messages -->
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                        </li>
-                    </ul>
-                </nav>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                     <!-- Formulario de new-Raphson -->
-                     <div>
-                        <div class="p-5">
-                            <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Metodo New-Raphson</h1>
-                            </div>
-                            <form class="user">
-                                <div class="form-inline">
-                                <div class="form-group col-mb-6">
-                                    <label for="idFun form-label" >F(x): &nbsp;</label>
-                                    <div class="col-mb-3"><input type="text" class="form-control form-control-user"
-                                        id="idFun" aria-describedby="emailHelp"
-                                        placeholder="Función"> </div>
                                 </div>
-                                <div class="col-mb-1"> <button type="button" class="btn btn-primary btn-user btn-block" onclick="setSombrerito()">^</button></div>
-                            </div>
-                                <div class="form-group">
-                                    <label for="idX" >X<sub>0</sub> :</label>
-                                    <input type="text" class="form-control form-control-user"
-                                        id="idX" aria-describedby="emailHelp"
-                                        placeholder="valor inicial de x">
-                                </div>
-                                <div class="form-group">
-                                    <label for="idError" >Error:</label>
-                                    <input type="text" class="form-control form-control-user"
-                                        id="idError" aria-describedby="emailHelp" placeholder="Tolerancia deseada">
-                                </div>
-                                <button type="button" class="btn btn-primary btn-user btn-block " onclick= "raph(document.getElementById('idFun').value, parseFloat(document.getElementById('idX').value), parseFloat(document.getElementById('idError').value))"> 
-                                    Calcular 
-                                </button> 
-                                <input type="button" class="btn btn-primary btn-user btn-block " value="Borrar" onclick="location.reload()"/>
-                                                    
                             </form>
-                            <hr>
-                            <div id="divisito"></div>
-                            <div id="grafiquito">
-                                <canvas id="chart" width="2000" height="600"></canvas>
-                            </div>
-                        </div>    
-                    </div>
+                        </div>
+                    </li>
 
+                    <!-- Nav Item - Alerts -->
+                    <!-- Nav Item - Messages -->
+
+                    <div class="topbar-divider d-none d-sm-block"></div>
+
+                    <!-- Nav Item - User Information -->
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                            <img class="img-profile rounded-circle"
+                                 src="img/undraw_profile.svg">
+                        </a>
+                        <!-- Dropdown - User Information -->
+                    </li>
+                </ul>
+            </nav>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <!-- Formulario de new-Raphson -->
+                <div>
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">Metodo New-Raphson</h1>
+                        </div>
+                        <form class="user">
+                            <div class="form-inline">
+                                <div class="form-group col-mb-6">
+                                    <label for="idFun form-label">F(x): &nbsp;</label>
+                                    <div class="col-mb-3"><input type="text" class="form-control form-control-user"
+                                                                 id="idFun" aria-describedby="emailHelp"
+                                                                 placeholder="Función"></div>
+                                </div>
+                                <div class="col-mb-1">
+                                    <button type="button" class="btn btn-primary btn-user btn-block"
+                                            onclick="setSombrerito()">^
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="idX">X<sub>0</sub> :</label>
+                                <input type="text" class="form-control form-control-user"
+                                       id="idX" aria-describedby="emailHelp"
+                                       placeholder="valor inicial de x">
+                            </div>
+                            <div class="form-group">
+                                <label for="idError">Error:</label>
+                                <input type="text" class="form-control form-control-user"
+                                       id="idError" aria-describedby="emailHelp" placeholder="Tolerancia deseada">
+                            </div>
+                            <button type="button" class="btn btn-primary btn-user btn-block "
+                                    onclick="raph(document.getElementById('idFun').value, parseFloat(document.getElementById('idX').value), parseFloat(document.getElementById('idError').value))">
+                                Calcular
+                            </button>
+                            <input type="button" class="btn btn-primary btn-user btn-block " value="Borrar"
+                                   onclick="location.reload()"/>
+
+                        </form>
+                        <hr>
+                        <div id="divisito"></div>
+                        <div id="grafiquito">
+                            <canvas id="chart" width="2000" height="600"></canvas>
+                        </div>
+                    </div>
                 </div>
-                <!-- /.container-fluid -->
 
             </div>
-            <!-- End of Main Content -->
-       
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                  
-                </div>
-            </footer>
-            <!-- End of Footer -->
+            <!-- /.container-fluid -->
 
         </div>
-        <!-- End of Content Wrapper -->
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+
+            </div>
+        </footer>
+        <!-- End of Footer -->
 
     </div>
-    <!-- End of Page Wrapper -->
+    <!-- End of Content Wrapper -->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+</div>
+<!-- End of Page Wrapper -->
 
-    <!-- Logout Modal-->
-    
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Logout Modal-->
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-    <script>
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    const raph = (funci,inicial,erro) =>{
-           
-            let  boton, grafi, parrafo, texto, contador,derivada, evaluadaDeriva, evaluadaFun, resultado, total, result, anterior;    
-            contador=0;       
-    
-            function miFuncion(anterior, inicial, erro) {
-                let primert,segundot, tercert, cuartot;
-                primert= inicial;
-                if(inicial===1){
-                    return true;
-                }
-                segundot= primert-(anterior);
-                tercert=segundot/(primert);    
-                cuartot= Math.abs(tercert*100);        
-                if (cuartot >= erro) {
-                    return true
-                }else{
-                    return false
-                }
-                //function agregar(index) {
-                  //  let fun = document.getElementById("idFun").value;
-                    //let ini = document.getElementById("idX").value;
-                    //let error = document.getElementById("idError").value;
-    
-                //}
-    }
-    
-            do {
-                contador++;
-                //alert("entro al while");
-                derivada=math.derivative(funci,'x');
-                //alert(derivada);
-                evaluadaFun=math.evaluate(funci,{x: inicial});  
-                //alert(evaluadaFun);              
-                evaluadaDeriva=derivada.evaluate({x: inicial});
-                //alert(evaluadaDeriva);
-                resultado= inicial - (evaluadaFun/evaluadaDeriva);
-                //alert(evaluadaFun/evaluadaDeriva);
-               // alert("la iteracion " + (contador) + " es = " + resultado);
-                anterior=inicial;
-                inicial=resultado;    
-                parrafo= document.createElement('p');
-                texto= document.createTextNode("La iteracion " + contador + " da " +resultado);
-                parrafo.appendChild(texto);
-                document.getElementById("divisito").appendChild(parrafo);   
-           
-                
-            } while (miFuncion(anterior,inicial,erro));
-    
-            alert ("iteracciones: "+contador);
-            alert("X vale= "+ resultado);
-            parrafo= document.createElement('h4');
-                texto= document.createTextNode("El resultado de X es  " +resultado);
-                parrafo.appendChild(texto);
-                document.getElementById("divisito").appendChild(parrafo);     
-                
-                renderCharts()
-    
-    
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="js/sb-admin-2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<script>
+
+    function raph(funci, inicial, erro) {
+
+        let parrafo, texto, contador, derivada, evaluadaDeriva, evaluadaFun, resultado, anterior;
+        contador = 0;
+
+        function miFuncion(anterior, inicial, erro) {
+            let primert, segundot, tercert, cuartot;
+            primert = inicial;
+            if (inicial === 1) {
+                return true;
+            }
+            segundot = primert - (anterior);
+            tercert = segundot / (primert);
+            cuartot = Math.abs(tercert * 100);
+            if (cuartot >= erro) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        do {
+            contador++;
+            console.debug("entro al while");
+            derivada = math.derivative(funci, 'x');
+            console.debug('derivada', derivada.toString());
+            evaluadaFun = math.evaluate(funci, {x: inicial});
+            console.debug('evaluadaFun', evaluadaFun.toString());
+            evaluadaDeriva = derivada.evaluate({x: inicial});
+            console.debug('evaluadaDeriva', evaluadaDeriva.toString());
+            resultado = inicial - (evaluadaFun / evaluadaDeriva);
+            console.debug('división', evaluadaFun / evaluadaDeriva);
+            console.debug("la iteracion " + (contador) + " es = " + resultado);
+            anterior = inicial;
+            inicial = resultado;
+            parrafo = document.createElement('p');
+            texto = document.createTextNode("La iteracion " + contador + " da " + resultado);
+            parrafo.appendChild(texto);
+            document.getElementById("divisito").appendChild(parrafo);
+
+
+        } while (miFuncion(anterior, inicial, erro));
+
+        console.debug("iteracciones: " + contador);
+        console.debug("X vale= " + resultado);
+        parrafo = document.createElement('h4');
+        texto = document.createTextNode("El resultado de X es  " + resultado);
+        parrafo.appendChild(texto);
+        document.getElementById("divisito").appendChild(parrafo);
+
+        renderCharts();
     }
 
 
-    let x1=1;
-    let x2=2;
-    let x3=-1;
-    let y1=-1;
-    let y2=5;
-    let y3=-3;
+    let x1 = 1;
+    let x2 = 2;
+    let x3 = -1;
+    let y1 = -1;
+    let y2 = 5;
+    let y3 = -3;
     let func = document.getElementById("idFun").value;
-    //alert ("la funcion es"+ func);
-    
+
+    //console.debug ("la funcion es"+ func);
+
 
     function totalCasesChart(ctx) {
-      const chart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: [y1,y2,y3],
-          datasets: [{
-            label: func,
-            data: [x1,x2,x3],
-            backgroundColor: 'rgba(255, 0, 0, 0)'
-          }]
-        }
-      }
-            )
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [y1, y2, y3],
+                datasets: [{
+                    label: func,
+                    data: [x1, x2, x3],
+                    backgroundColor: 'rgba(255, 0, 0, 0)'
+                }]
+            }
+        });
     }
-  
+
     function renderCharts() {
-      $("#grafiquito").show();
-  
-      const ctx = document.querySelector('#chart').getContext('2d')
-      totalCasesChart(ctx)   
+        $("#grafiquito").show();
+
+        const ctx = document.querySelector('#chart').getContext('2d')
+        totalCasesChart(ctx)
     }
-  
 
-        const setSombrerito = () =>{
-          let inputValue = document.getElementById("idFun").value; 
-          document.getElementById("idFun").value = inputValue + "^"; 
-          document.getElementById("idFun").focus();
-        }
 
-        /* const ouy = () =>{
-            let fun = document.getElementById("idFun").value;
-            let ini = document.getElementById("idX").value;
-            let error = document.getElementById("idError").value;
+    function setSombrerito() {
+        let inputValue = document.getElementById("idFun").value;
+        document.getElementById("idFun").value = inputValue + "^";
+        document.getElementById("idFun").focus();
+    }
 
-            document.getElementById("uno").innerHTML = "La funcion es:"; 
-            document.getElementById("dos").innerHTML = fun; 
-            document.getElementById("tres").innerHTML = "El valor inicial es:"; 
-            document.getElementById("cuatro").innerHTML = ini; 
-            document.getElementById("cinco").innerHTML = "con un error de:"; 
-            document.getElementById("seis").innerHTML = error; 
-          
-        } */
-        
-      </script> 
+    /* const ouy = () =>{
+        let fun = document.getElementById("idFun").value;
+        let ini = document.getElementById("idX").value;
+        let error = document.getElementById("idError").value;
+
+        document.getElementById("uno").innerHTML = "La funcion es:";
+        document.getElementById("dos").innerHTML = fun;
+        document.getElementById("tres").innerHTML = "El valor inicial es:";
+        document.getElementById("cuatro").innerHTML = ini;
+        document.getElementById("cinco").innerHTML = "con un error de:";
+        document.getElementById("seis").innerHTML = error;
+
+    } */
+
+</script>
 
 </body>
 
